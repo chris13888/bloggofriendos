@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='{{ url_for("static",filename="styles/styles.css") }}'>
+    <script type='text/javascript' src='{{ url_for("static",filename="scripts/jquery.js") }}'></script>
+    <script type='text/javascript' src='{{ url_for("static",filename="scripts/script.js") }}'></script>
+
+    <title id='title'>py.ongyang's blog</title>
+
+  </head>
+  <body>
+    <div id = 'toparea'><h1 style='user-select: none;'>py.ongyang</h1></div>
+    <div id = 'bottomarea'>
+      <div id = 'content'>
+        {% include 'links.html' %}
+      </div>
+    </div>
+    <div id = 'footer'>
+      <p>About py.ongyang: py.ongyang is a blog created November 16, 2018 and was uploaded the very next day.</p>
+      <p>Contact us: pyoy0@outlook.com</p>
+    </div>
+    <div id = 'pagewrapper' style='display: none; background-image: url({{ url_for("static", filename="images/wall.jpg") }})'>
+      <button class = 'button' onclick='dismiss();' id='ret'>Return to Home</button>
+      <div id = 'page'>
+      </div>
+    </div>
+  </body>
+</html>
